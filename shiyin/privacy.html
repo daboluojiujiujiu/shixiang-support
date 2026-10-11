@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>拾音隐私政策</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f3f6fb;--card:#fff;--ink:#18314d;--muted:#53657a;--accent:#286cb7;--line:#dbe5ef;--soft:#edf4fd}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:40px 20px 70px}article{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,5vw,48px)}h1{font-size:clamp(28px,5vw,38px);line-height:1.3;margin:12px 0}h2{font-size:21px;line-height:1.5;margin:32px 0 10px}p,li{color:var(--muted)}a{color:var(--accent);overflow-wrap:anywhere}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.draft{background:var(--soft);border-radius:10px;padding:12px 16px;font-size:14px}strong{color:var(--ink)}li{margin:8px 0}footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-size:14px}@media(prefers-color-scheme:dark){:root{--bg:#111b29;--card:#182536;--ink:#e5edf7;--muted:#b2c1d2;--accent:#8dbdff;--line:#304156;--soft:#21344d}}@media print{body,article{background:white;color:black}article{border:0;padding:0}p,li{color:black}}
+  </style>
+</head>
+<body><main><article>
+  <p>更新日期：2026-10-11</p>
+  <h1>拾音隐私政策</h1>
+  <p>拾音用于把你选择的录音和视频转成文字，或提取音频。默认使用本机识别，云端识别、润色、中文对照及 Obsidian 自动保存均由你选择开启。</p>
+  <p>开发者：Bo Wang。隐私与支持联系邮箱：<a href="mailto:137771579@qq.com">137771579@qq.com</a>。</p>
+
+  <h2>1. 你选择的素材与本机处理</h2>
+  <p>拾音读取你通过系统照片选择器选中的视频，或通过“文件”、语音备忘录及其他 App 主动提供的音视频。App 不扫描你的整个照片库，也不提供相机或麦克风录制功能。导入和处理不会删除你在照片、语音备忘录或文件提供方中的原始素材。</p>
+  <p>素材的导入副本、文字稿、提取的音频、处理记录和设置保存在 App 的设备存储中。系统备份可能包含这些本机数据。若素材来自 iCloud 或其他文件服务，素材下载由相应服务处理。</p>
+  <p>本机识别使用 Apple SpeechAnalyzer / SpeechTranscriber 在设备上处理，需要 iOS / iPadOS 26 或更新系统及受支持的设备和语言。首次使用可能需要下载 Apple 语言资源。音频提取也在设备上完成。开启云端处理时，另适用下述发送规则。</p>
+
+  <h2>2. 可选的云端服务会收到什么</h2>
+  <p>拾音没有内置开发者的私人 API 密钥或云端额度。你可以配置自己使用的 HTTPS 服务地址、兼容模型与密钥。语音服务推荐阿里云百炼，文字润色与翻译推荐 DeepSeek；这些均为可修改的推荐，不是使用要求。</p>
+  <ul>
+    <li><strong>云端识别：</strong>向你配置的语音服务发送所选素材的声音、模型与处理参数，以及你填写的专有名词（如有且接口支持）。不会为语音识别上传原视频画面。使用百炼文件转写时，音频会先上传到该服务返回的阿里云对象存储地址，再由百炼处理。</li>
+    <li><strong>云端润色：</strong>向你配置的文字服务发送文字稿，以及用于辅助校对的参考标题、模型与处理指令。</li>
+    <li><strong>中文对照：</strong>向同一文字服务发送需要翻译的文字稿分段及相关上下文、模型与处理指令。</li>
+    <li><strong>连接测试：</strong>发送 App 内置的示例音频或示例文字；语音测试可能同时发送你配置的专有名词。测试会使用真实服务，可能产生费用。</li>
+  </ul>
+  <p>云端请求由设备直接发送给你配置的服务及其提供的文件存储地址，拾音开发者不接收这些请求的音频、文字稿或 API 密钥。请求中的 API 密钥用于向相应服务认证，保存在本机钥匙串中。百炼对象存储上传使用服务提供的临时上传凭证，而不是账户 API 密钥。服务方还会收到建立网络连接所需的信息，例如 IP 地址。</p>
+  <p><strong>云端音频、文字稿及相关上下文可能由服务方留存，并关联你的服务账户。</strong>账户标识用于认证、确定文件访问权限及提供功能。百炼当前临时上传文档说明文件有效期为 48 小时，随后自动清理；这不代表相关调用记录、结果和备份都在同一时刻删除。DeepSeek API 默认使用磁盘缓存，其文档说明不再使用的缓存通常在数小时至数天后清理。</p>
+  <p>除完成润色和翻译外，文字服务可能按照其适用条款和账户选择，将输入与输出用于模型训练或服务改进。DeepSeek 的现行条款包含这种可能用途；拾音不能保证每个账户均已退出，也不会替你变更服务账户中的选择。</p>
+  <p><strong>具体保留期限、账户关联、训练用途和删除方式取决于你所选服务及账户的适用政策和设置。</strong>拾音无法保证任意兼容服务零保留、即时删除或不用于模型训练，也不能代为删除服务方已经收到的数据。授权前可查阅<a href="https://help.aliyun.com/zh/model-studio/privacy-notice">百炼隐私说明</a>、<a href="https://help.aliyun.com/zh/model-studio/get-temporary-file-url/">百炼临时文件说明</a>、<a href="https://cdn.deepseek.com/policies/zh-CN/deepseek-privacy-policy.html">DeepSeek 隐私政策</a>及<a href="https://api-docs.deepseek.com/guides/kv_cache/">DeepSeek 缓存说明</a>；使用其他服务时，请查阅相应提供方的政策和费用说明。</p>
+
+  <h2>3. 授权与撤回</h2>
+  <p>首次向相应服务发送音频或文字前，App 会说明接收服务与用途并征求允许。允许状态按具体服务地址及音频／文字用途保存；相同地址和用途之后会复用已保存的授权，更换地址或用途会再次询问。仅保存配置和密钥不会发起处理请求，也不会自动启用云端功能。</p>
+  <p>你可在<strong>“设置 → 关于与帮助 → 隐私与云端授权”</strong>撤回已保存的允许状态。之后新开启的云端任务会重新询问。撤回不会召回已发送的内容，也不会自动停止正在进行的任务；如需停止当前处理，请返回转写页面停止。</p>
+
+  <h2>4. 分享与 Obsidian</h2>
+  <p>主动分享文件时，你选中的 App 或服务会收到该文件。开启 Obsidian 自动保存后，新生成的文字稿会写入你选择的库文件夹。若该文件夹位于 iCloud 或其他同步目录，后续同步由相应服务负责，并受其政策约束。</p>
+  <p>你可以关闭自动保存，停止新的自动导出。已经分享或导出的副本仍需在目标 App、文件夹或同步服务中管理。</p>
+
+  <h2>5. 保存与删除</h2>
+  <ul>
+    <li><strong>输出文件：</strong>文字稿和提取的音频保存在本机，直到你在“记录 → 转写文件”中删除或删除 App 的本地数据。仅删除／清空记录不会删除这些文件。</li>
+    <li><strong>待处理录音：</strong>分享导入的副本在失败或中断后可保留供重试；可在“收到的录音”中移除。处理成功后 App 会尝试清理该导入副本。</li>
+    <li><strong>密钥：</strong>在“设置 → 云端服务”中可移除当前配置服务的已保存密钥。曾更换服务地址时，需针对原地址管理原密钥；也可在服务提供方后台撤销密钥。卸载 App 不应被视为清除了所有钥匙串密钥。</li>
+    <li><strong>备份和外部副本：</strong>在系统中选择“删除 App”会移除其本地文件；“卸载 App”会保留文稿和数据。系统备份、云端备份、已导出文件、第三方已收到的数据需在相应系统或服务中分别管理。</li>
+  </ul>
+  <p>拾音不要求注册 App 账户，当前版本不包含广告、分析或跟踪 SDK。可选云端处理仍会按第 2 节发送数据，因此不能把整款 App 描述为“任何情况下都不上传数据”。</p>
+
+  <h2>6. 联系支持</h2>
+  <p>向支持邮箱发送邮件时，开发者及邮件服务提供方会收到你的邮箱地址、邮件正文、附件和必要的邮件技术信息。请只提供排查问题所需的信息，勿发送 API 密钥或含有他人隐私的原始录音、视频。</p>
+  <p>如需查询或请求删除你主动发送的支持信息，请联系 <a href="mailto:137771579@qq.com">137771579@qq.com</a>。该邮箱无法直接访问或删除你的设备文件，第三方云服务和已导出的副本也需向对应服务管理。</p>
+  <p>支持邮件由开发者处理，仅用于回复咨询、排查问题和处理隐私请求，不用于广告或营销。我们仅在解决问题或履行法定义务所必需的期限内保留这些信息，并在处理完成后删除不再必要的邮件与附件。你可以通过上述邮箱申请删除；开发者会核实请求、处理可删除的信息并回复处理结果。邮件服务提供方的系统保留和备份按其规则处理。</p>
+
+  <h2>7. 政策更新</h2>
+  <p>功能或数据处理方式变化时，开发者应同步更新本政策、App 内说明及商店隐私信息。正式版本应在页面注明生效或更新日期。</p>
+  <footer><a href="support.html">拾音技术支持</a></footer>
+</article></main></body>
+</html>

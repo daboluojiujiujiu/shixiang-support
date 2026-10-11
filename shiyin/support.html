@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>拾音技术支持</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f3f6fb;--card:#fff;--ink:#18314d;--muted:#53657a;--accent:#286cb7;--line:#dbe5ef;--soft:#edf4fd}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:40px 20px 70px}article{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,5vw,48px)}h1{font-size:clamp(28px,5vw,38px);line-height:1.3;margin:12px 0}h2{font-size:21px;line-height:1.5;margin:32px 0 10px}p,li{color:var(--muted)}a{color:var(--accent);overflow-wrap:anywhere}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.draft,.contact{background:var(--soft);border-radius:10px;padding:12px 16px}.draft{font-size:14px}strong{color:var(--ink)}li{margin:8px 0}footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-size:14px}@media(prefers-color-scheme:dark){:root{--bg:#111b29;--card:#182536;--ink:#e5edf7;--muted:#b2c1d2;--accent:#8dbdff;--line:#304156;--soft:#21344d}}@media print{body,article{background:white;color:black}article{border:0;padding:0}p,li{color:black}}
+  </style>
+</head>
+<body><main><article>
+  <p>更新日期：2026-10-11</p>
+  <h1>拾音技术支持</h1>
+  <p>把声音留成可以阅读、编辑和分享的文字稿。</p>
+  <p class="contact">需要帮助？请联系 <a href="mailto:137771579@qq.com?subject=%E6%8B%BE%E9%9F%B3%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88">137771579@qq.com</a>。请附设备型号、系统版本、拾音版本、操作步骤及提示文字；不要发送 API 密钥或私人录音、视频原件。</p>
+
+  <h2>怎样导入录音或视频？</h2>
+  <p>在首页选“转成文字”或“提取音频”，再点“导入录音或文件”或“从照片选择视频”。也可以在系统语音备忘录中点“分享 → 拾音”；部分系统显示“拷贝到拾音”。若分享列表暂未显示，可先把录音保存到“文件”，再从拾音导入。</p>
+  <p>首次引导可以完成或跳过。引导期间收到的文件会先收好，进入首页后再处理。首次打开也可到“记录”阅读内置示例文字稿。</p>
+
+  <h2>为什么本机识别不可用？</h2>
+  <p>App 可安装在 iOS / iPadOS 17 或更新系统，但<strong>本机识别需要 iOS / iPadOS 26 或更新系统，以及支持的设备和语言</strong>。首次使用可能需要联网下载 Apple 语言资源；安装较新系统也不等于每台设备和每种语言都支持。</p>
+  <p>较早系统仍可提取音频；若需要转写，可在设置中自行配置云端识别。只使用本机识别和音频提取不需要填写 API 密钥。</p>
+
+  <h2>怎样配置云端识别、润色或中文对照？</h2>
+  <p>进入“设置 → 云端服务”，填写你自己的服务地址、模型和 API 密钥。语音与文字服务可以分别配置。百炼和 DeepSeek 是推荐选项；你也可以选择支持相应兼容接口的服务和模型。并非任意模型都支持音频转写或聊天接口，请按服务方文档填写。</p>
+  <p>保存配置后，按需要在设置中选择“云端识别”或开启“云端润色”“中文对照”。保存本身不会发起请求，也不会自动打开这些功能。“测试连接”会发送内置样本，可能产生第三方服务费用。</p>
+  <p>认证失败时检查服务地址、模型权限和密钥；额度不足或限流时检查服务账户。拾音不提供开发者的私人密钥或内置云端额度。</p>
+
+  <h2>素材会被上传吗？怎样撤回授权？</h2>
+  <p>本机识别和音频提取在设备上处理。选择云端功能并允许相应服务后，音频、专有名词或文字稿及相关标题／上下文会按功能发送。接收服务可能保留数据并收费，请先了解其政策。</p>
+  <p>在“设置 → 关于与帮助 → 隐私与云端授权”可撤回已保存的允许状态，之后新任务会重新询问。当前任务不会随撤回自动停止，需返回转写页停止；已发送的数据不能由拾音召回。</p>
+
+  <h2>文字稿在哪里？删除记录会删文件吗？</h2>
+  <p>完成的文字稿和音频显示在“记录”。点文字稿可阅读、编辑、复制和分享。删除记录只移除历史条目；文件仍在“记录 → 转写文件”中，需在那里单独删除。App 不会因此删除照片、文件或语音备忘录中的原始素材。</p>
+  <p>内置示例只添加一次，可像普通文字稿一样编辑、重命名或删除；删除后不会在下次启动重新生成。</p>
+
+  <h2>任务失败或中断怎么办？</h2>
+  <p>先查看提示并确认素材包含可识别的人声。分享导入的录音可在“收到的录音”中重试或移除。润色或翻译中断后，已保存的原稿和处理结果仍会保留；可打开文字稿查看，并在有继续翻译入口时继续。</p>
+  <p>语音和模型结果可能有误，重要信息请对照原始素材核对。</p>
+
+  <h2>怎样保存到 Obsidian？</h2>
+  <p>进入“设置 → Obsidian”，选择库文件夹并打开自动保存。新文字稿会写入“拾音转写”文件夹；保存失败会保留任务供重试。关闭自动保存不会删除已导出的文件。库位于同步目录时，后续同步由对应服务负责。</p>
+
+  <h2>怎样删除密钥？</h2>
+  <p>进入“设置 → 云端服务”，点击“移除已保存的云端密钥”，删除当前配置服务的本机密钥。曾更换地址时，应在原地址下管理原密钥；需要彻底撤销服务访问时，请同时在服务方后台撤销密钥。不要把密钥通过邮件发给客服。</p>
+
+  <footer><a href="privacy.html">查看拾音隐私政策</a></footer>
+</article></main></body>
+</html>
